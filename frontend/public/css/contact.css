@@ -1,0 +1,141 @@
+/* Global */
+.contact-page {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.contact-hero {
+  background: linear-gradient(rgba(114,30,30,0.7), rgba(152,42,77,0.7)),
+              url("/assets/image/wid3.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.contact-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.contact-hero p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Contact Info */
+.contact-info {
+  padding: 60px 20px;
+  background: #f8f8f8;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.info-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h3 {
+  color: #982a4d;
+  margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-form-section h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #982a4d;
+  box-shadow: 0 0 10px rgba(152,42,77,0.2);
+  outline: none;
+}
+
+.contact-form .btn-primary {
+  background: #ffd700;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+  background: #ffcc00;
+}
+
+/* Map Section */
+.contact-map {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-map h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  margin-bottom: 20px;
+}
+
+.map-placeholder {
+  background: #ddd;
+  height: 300px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+  .contact-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+}
