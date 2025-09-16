@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // important for correct asset paths
+  base: '/Blessing-Gate', // important for correct asset paths
 });
