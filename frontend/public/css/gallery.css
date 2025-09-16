@@ -8,7 +8,7 @@
 /* Hero Section */
 .gallery-hero {
   background: linear-gradient(rgba(114,30,30,0.7), rgba(152,42,77,0.7)),
-              url("/assets/image/gallery-hero.jpg") center/cover no-repeat;
+              url("/assets/image/banner5.jpg") center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 120px 20px;

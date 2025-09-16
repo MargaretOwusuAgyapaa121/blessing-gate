@@ -1,0 +1,49 @@
+/* 🌍 Global Reset + Responsiveness */
+
+/* Reset margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Smooth font scaling */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fff; /* safe default */
+  color: #222; /* neutral text color */
+}
+
+/* Images scale correctly */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Links inherit color unless styled */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive containers */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Make text wrap, avoid breaking layouts */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
