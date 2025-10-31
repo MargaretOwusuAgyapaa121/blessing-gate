@@ -1,11 +1,11 @@
-/* General */
+/* === GENERAL === */
 .about-page {
   font-family: "Inter", sans-serif;
   color: #222;
   line-height: 1.6;
 }
 
-/* Hero */
+/* === HERO SECTION === */
 .about-hero {
   background: linear-gradient(rgba(114, 30, 30, 0.7), rgba(152, 42, 77, 0.7)),
     url("/assets/image/rhab1.jpg") center/cover no-repeat;
@@ -25,7 +25,7 @@
   margin: auto;
 }
 
-/* === Mission Section === */
+/* === MISSION SECTION === */
 .about-mission {
   position: relative;
   padding: 120px 20px;
@@ -34,32 +34,33 @@
   overflow: hidden;
 }
 
-/* Soft glowing gradient orb in the background */
-.about-mission::before {
+/* Glowing gradient accents */
+.about-mission::before,
+.about-mission::after {
   content: "";
   position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.about-mission::before {
   width: 400px;
   height: 400px;
   background: radial-gradient(circle, rgba(100, 149, 237, 0.25), transparent 70%);
   top: -100px;
   right: -100px;
-  filter: blur(60px);
-  z-index: 0;
 }
 
 .about-mission::after {
-  content: "";
-  position: absolute;
   width: 300px;
   height: 300px;
   background: radial-gradient(circle, rgba(255, 215, 0, 0.25), transparent 70%);
   bottom: -80px;
   left: -80px;
-  filter: blur(60px);
-  z-index: 0;
 }
 
-/* === Mission Content Card === */
+/* === MISSION CARD === */
 .mission-content {
   position: relative;
   z-index: 1;
@@ -79,7 +80,6 @@
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
 }
 
-/* === Heading === */
 .mission-content h2 {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 700;
@@ -100,17 +100,15 @@
   border-radius: 2px;
 }
 
-/* === Paragraph === */
 .mission-content p {
   font-size: 1.1rem;
   color: #444;
   line-height: 1.7;
   margin: 0 auto;
   max-width: 700px;
-  animation: fadeIn 1.2s ease both;
 }
 
-/* === Vision Section === */
+/* === VISION SECTION === */
 .about-vision {
   position: relative;
   padding: 120px 20px;
@@ -119,32 +117,31 @@
   overflow: hidden;
 }
 
-/* Soft glowing orbs for modern ambiance */
-.about-vision::before {
+.about-vision::before,
+.about-vision::after {
   content: "";
   position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.about-vision::before {
   width: 380px;
   height: 380px;
   background: radial-gradient(circle, rgba(78, 67, 118, 0.25), transparent 70%);
   top: -100px;
   left: -120px;
-  filter: blur(60px);
-  z-index: 0;
 }
 
 .about-vision::after {
-  content: "";
-  position: absolute;
   width: 350px;
   height: 350px;
   background: radial-gradient(circle, rgba(0, 191, 255, 0.25), transparent 70%);
   bottom: -80px;
   right: -100px;
-  filter: blur(60px);
-  z-index: 0;
 }
 
-/* === Vision Card === */
 .vision-content {
   position: relative;
   z-index: 1;
@@ -164,7 +161,6 @@
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
 }
 
-/* === Heading === */
 .vision-content h2 {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 700;
@@ -172,115 +168,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 25px;
-  position: relative;
 }
 
-.vision-content h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 4px;
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  margin: 15px auto 0;
-  border-radius: 2px;
-}
-
-/* === Paragraph === */
 .vision-content p {
   font-size: 1.1rem;
   color: #333;
   line-height: 1.7;
   max-width: 700px;
   margin: 0 auto;
-  animation: fadeIn 1.5s ease both;
 }
-
-/* === Animations (reuse Mission ones) === */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
-  .about-vision {
-    padding: 80px 15px;
-  }
-
-  .vision-content {
-    padding: 40px 25px;
-  }
-
-  .vision-content h2 {
-    font-size: 1.9rem;
-  }
-
-  .vision-content p {
-    font-size: 1rem;
-  }
-}
-
-
-/* === Subtle Animations === */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
-  .about-mission {
-    padding: 80px 15px;
-  }
-
-  .mission-content {
-    padding: 40px 25px;
-  }
-
-  .mission-content h2 {
-    font-size: 1.9rem;
-  }
-
-  .mission-content p {
-    font-size: 1rem;
-  }
-}
-
-
 
 /* === TEAM SECTION === */
 .about-team {
@@ -314,7 +210,6 @@
   z-index: 1;
 }
 
-/* === TEAM GRID === */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -325,97 +220,47 @@
   z-index: 1;
 }
 
-/* === TEAM CARD === */
-..about-team {
-  padding: 100px 20px;
-  text-align: center;
-  background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
-}
-
-.about-team h2 {
-  font-size: clamp(1.8rem, 3vw, 2.2rem);
-  margin-bottom: 60px;
-  font-weight: 700;
-  color: #111;
-  letter-spacing: 1px;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/.about-team {
-  padding: 100px 20px;
-  text-align: center;
-  background: linear-gradient(180deg, #fafafa 0%, #f0f0f0 100%);
-}
-
-.about-team h2 {
-  font-size: clamp(1.8rem, 3vw, 2.2rem);
-  margin-bottom: 60px;
-  font-weight: 700;
-  color: #111;
-  letter-spacing: 1px;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* === TEAM CARD === */
 .team-card {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  height: 420px; /* Ensures all cards are the same height */
+  height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-/* === TEAM IMAGE === */
 .team-card img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* Makes all images fit evenly */
-  object-position: center top; /* Keeps faces visible */
+  object-fit: cover;
+  object-position: center top;
   transition: transform 0.6s ease, filter 0.3s ease;
   z-index: 0;
 }
 
-/* Zoom effect on hover */
 .team-card:hover img {
   transform: scale(1.1);
   filter: brightness(80%);
 }
 
-/* === OVERLAY TEXT === */
 .team-info {
   position: relative;
   z-index: 1;
   width: 100%;
   padding: 40px 20px 25px;
-  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0.1));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.1));
   color: #fff;
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.4s ease;
 }
 
-/* Show info on hover */
 .team-card:hover .team-info {
   opacity: 1;
   transform: translateY(0);
@@ -432,14 +277,7 @@
   opacity: 0.85;
 }
 
-/* Hover lift */
-.team-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
-}
-
-
-/* === CALL TO ACTION SECTION === */
+/* === CTA SECTION === */
 .about-cta {
   position: relative;
   background: linear-gradient(90deg, #4e4376, #2b5876);
@@ -470,7 +308,6 @@
   animation: fadeUp 1s ease both;
 }
 
-/* === CTA BUTTON === */
 .btn-primary {
   background: #ffd700;
   color: #000;
@@ -490,13 +327,12 @@
   transform: translateY(-3px);
 }
 
-/* === Animations === */
+/* === ANIMATIONS === */
 @keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(25px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -505,8 +341,14 @@
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-  .team-card img {
-    height: 250px;
+  .mission-content,
+  .vision-content {
+    padding: 40px 25px;
+  }
+
+  .about-mission,
+  .about-vision {
+    padding: 80px 15px;
   }
 
   .about-cta {
@@ -517,10 +359,7 @@
     padding: 12px 28px;
     font-size: 1rem;
   }
-}
 
-/* Responsive */
-@media (max-width: 768px) {
   .about-hero h1 {
     font-size: clamp(1.8rem, 6vw, 2.5rem);
   }

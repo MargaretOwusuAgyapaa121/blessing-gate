@@ -1,4 +1,4 @@
-/* Global */
+/* 🌟 Global */
 .gallery-page {
   font-family: 'Inter', sans-serif;
   color: #222;
@@ -8,7 +8,7 @@
   overflow-x: hidden;
 }
 
-/* Dim effect when active image is open */
+/* Dim effect when active image/video is open */
 .gallery-page.dimmed::before {
   content: "";
   position: fixed;
@@ -19,9 +19,9 @@
   transition: opacity 0.3s ease;
 }
 
-/* Hero Section */
+/* 🌄 Hero Section */
 .gallery-hero {
-  background: linear-gradient(rgba(114,30,30,0.6), rgba(152,42,77,0.6)),
+  background: linear-gradient(rgba(114,30,30,0.65), rgba(152,42,77,0.65)),
               url("/assets/image/banner5.jpg") center/cover no-repeat;
   color: #fff;
   text-align: center;
@@ -44,7 +44,7 @@
   opacity: 0.9;
 }
 
-/* Gallery Section */
+/* 🖼️ Gallery Section */
 .gallery-section {
   padding: 80px 20px;
   max-width: 1300px;
@@ -52,7 +52,7 @@
   background-color: #deddda;
 }
 
-/* ✅ Fixed to 4 columns */
+/* Fixed 4 columns (responsive handled below) */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -89,7 +89,25 @@
   filter: brightness(105%) saturate(120%);
 }
 
-/* ✅ Active image (zoomed view) */
+/* 🎥 Video items (same visual treatment) */
+.gallery-item video {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+  filter: brightness(95%) saturate(110%);
+  pointer-events: none;
+}
+
+.gallery-item:hover video {
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  filter: brightness(105%) saturate(120%);
+}
+
+/* Active media (zoomed view) */
 .gallery-item.active {
   position: fixed;
   top: 50%;
@@ -104,16 +122,17 @@
   animation: zoomIn 0.35s ease forwards;
 }
 
-.gallery-item.active img {
+.gallery-item.active img,
+.gallery-item.active video {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transform: none;
   border-radius: 0;
+  pointer-events: auto;
   box-shadow: none;
 }
 
-/* ✅ Zoom animation */
+/* Zoom animation */
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -125,7 +144,7 @@
   }
 }
 
-/* CTA Banner */
+/* 🌈 CTA Banner */
 .gallery-cta {
   background: linear-gradient(90deg, #721e1e, #982a4d);
   color: #fff;
@@ -156,47 +175,14 @@
   background: #ffcc00;
   transform: translateY(-3px);
 }
-/* 🎥 Make videos look like images in the grid */
-.gallery-item video {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
-  filter: brightness(95%) saturate(110%);
-  pointer-events: none; /* allows click-through to parent div */
-}
 
-/* Hover effect for videos too */
-.gallery-item:hover video {
-  transform: scale(1.06);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  filter: brightness(105%) saturate(120%);
-}
-
-/* Active video (enlarged mode) */
-.gallery-item.active video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 0;
-  pointer-events: auto;
-}
-
-/* Optional: autoplay active video */
-.gallery-item.active video {
-  autoplay: autoplay;
-  controls: controls;
-}
-
-
-/* Responsive */
+/* 📱 Responsive Design */
 @media (max-width: 992px) {
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-  .gallery-item img {
+  .gallery-item img,
+  .gallery-item video {
     height: 220px;
   }
   .gallery-item.active {
@@ -209,12 +195,19 @@
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .gallery-item img {
+  .gallery-item img,
+  .gallery-item video {
     height: 200px;
   }
   .gallery-item.active {
     width: 90vw;
     height: 70vh;
+  }
+  .gallery-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+  .gallery-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
   }
 }
 
@@ -222,7 +215,8 @@
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-  .gallery-item img {
+  .gallery-item img,
+  .gallery-item video {
     height: 180px;
   }
   .gallery-item.active {

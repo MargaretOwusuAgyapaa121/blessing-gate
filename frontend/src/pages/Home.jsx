@@ -1,12 +1,9 @@
 import React from "react";
 
-
-
 function Home() {
   return (
     <div className="home">
-
-      {/* Hero Section */}
+      {/* ===== Hero Section ===== */}
       <section className="hero">
         <div className="hero-content">
           <h1>Empowering Communities, Changing Lives</h1>
@@ -21,7 +18,7 @@ function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* ===== About Section ===== */}
       <section className="about-preview">
         <div className="about-container">
           <div className="about-text">
@@ -39,85 +36,76 @@ function Home() {
         </div>
       </section>
 
+      {/* ===== Programs Section ===== */}
+      <section className="programs">
+        <h2>Our Focus Areas</h2>
+        <div className="program-grid">
+          <div className="program-card">
+            <img src="/assets/image/executive.jpg" alt="Education" />
+            <div className="program-overlay">
+              <h3>Education</h3>
+              <p>Providing access to quality education and scholarships.</p>
+            </div>
+          </div>
 
-      {/* Programs Section */}
-    <section className="programs">
-  <h2>Our Focus Areas</h2>
-  <div className="program-grid">
-    <div className="program-card">
-      <img src="/assets/image/executive.jpg" alt="Education" />
-      <div className="program-overlay">
-        <h3>Education</h3>
-        <p>Providing access to quality education and scholarships.</p>
-      </div>
-    </div>
+          <div className="program-card">
+            <img src="/assets/image/rhab1.jpg" alt="Healthcare" />
+            <div className="program-overlay">
+              <h3>Healthcare</h3>
+              <p>Supporting health camps and essential medical care.</p>
+            </div>
+          </div>
 
-    <div className="program-card">
-      <img src="/assets/image/rhab1.jpg" alt="Healthcare" />
-      <div className="program-overlay">
-        <h3>Healthcare</h3>
-        <p>Supporting health camps and essential medical care.</p>
-      </div>
-    </div>
-
-    <div className="program-card">
-      <img src="/assets/image/wid3.jpg" alt="Community" />
-      <div className="program-overlay">
-        <h3>Community</h3>
-        <p>Empowering families through training and opportunities.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-   {/* Events Preview */}
-<section className="events-preview">
-  <h2>Upcoming Events</h2>
-
-  <div className="event-grid">
-    {/* Event Card 1 */}
-    <div className="event-card">
-      <img src="/assets/image/events/event.jpg" alt="Charity Walk 2025" />
-      <div className="event-overlay">
-        <div className="event-info">
-          <h3>Charity Walk 2025</h3>
-          <p>
-            Join us on <strong>October 25, 2025</strong>, for a dinner with Asuofua ghettos .
-          </p>
-          <a href="/events" className="btn-event">View Details</a>
+          <div className="program-card">
+            <img src="/assets/image/wid3.jpg" alt="Community" />
+            <div className="program-overlay">
+              <h3>Community</h3>
+              <p>Empowering families through training and opportunities.</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
+      {/* ===== Events Preview ===== */}
+      <section className="events-preview">
+        <h2>Upcoming Events</h2>
+        <div className="event-grid">
+          <div className="event-card">
+            <img src="/assets/image/events/event.jpg" alt="Charity Walk 2025" />
+            <div className="event-overlay">
+              <div className="event-info">
+                <h3>Charity Walk 2025</h3>
+                <p>
+                  Join us on <strong>October 25, 2025</strong> for a dinner with Asuofua ghettos.
+                </p>
+                <a href="/events" className="btn-event">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      {/* ===== Gallery Preview ===== */}
+      <section className="gallery-preview">
+        <h2>From Our Gallery</h2>
+        <div className="gallery-grid">
+          <div className="gallery-item">
+            <img src="/assets/image/dinner/d1.jpg" alt="Gallery 1" />
+          </div>
+          <div className="gallery-item">
+            <img src="/assets/image/dinner/d3.jpg" alt="Gallery 2" />
+          </div>
+          <div className="gallery-item">
+            <img src="/assets/image/dinner/d9.jpg" alt="Gallery 3" />
+          </div>
+          <div className="gallery-item">
+            <img src="/assets/image/banner5.jpg" alt="Gallery 4" />
+          </div>
+        </div>
+        <a href="/gallery" className="btn-link">View Full Gallery →</a>
+      </section>
 
-     {/* Gallery Preview */}
-<section className="gallery-preview">
-  <h2>From Our Gallery</h2>
-
-  <div className="gallery-grid">
-    <div className="gallery-item">
-      <img src="/assets/image/dinner/d1.jpg" alt="Gallery 1" />
-    </div>
-    <div className="gallery-item">
-      <img src="/assets/image/dinner/d3.jpg" alt="Gallery 2" />
-    </div>
-    <div className="gallery-item">
-      <img src="/assets/image/dinner/d9.jpg" alt="Gallery 3" />
-    </div>
-     <div className="gallery-item">
-      <img src="/assets/image/banner5.jpg" alt="Gallery 3" />
-    </div>
-  </div>
-
-  <a href="/gallery" className="btn-link">View Full Gallery →</a>
-</section>
-
-     
-
-      {/* Call to Action Banner */}
+      {/* ===== Call to Action Banner ===== */}
       <section className="cta-banner">
         <h2>Be Part of the Change</h2>
         <a href="/donate" className="btn-primary">Donate Today</a>

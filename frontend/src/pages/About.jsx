@@ -4,18 +4,18 @@ function About() {
   return (
     <div className="about-page">
 
-      {/* Hero Section */}
+      {/* ===== Hero Section ===== */}
       <section className="about-hero">
         <div className="about-hero-content">
           <h1>About Our Foundation</h1>
           <p>
-            We are committed to creating lasting change in communities by providing education, healthcare, and opportunities for empowerment.
+            We are committed to creating lasting change in communities by providing
+            education, healthcare, and opportunities for empowerment.
           </p>
         </div>
       </section>
 
-
-      {/* Mission Section */}
+      {/* ===== Mission Section ===== */}
       <section className="about-mission">
         <div className="mission-content">
           <h2>Our Mission</h2>
@@ -27,7 +27,7 @@ function About() {
         </div>
       </section>
 
-      {/* Vision Section */}
+      {/* ===== Vision Section ===== */}
       <section className="about-vision">
         <div className="vision-content">
           <h2>Our Vision</h2>
@@ -38,40 +38,40 @@ function About() {
         </div>
       </section>
 
-<section className="about-team">
-  <div className="team-content">
-    <h2>Meet Our Team</h2>
-    <div className="team-grid">
-      <div className="team-card">
-        <img src="/assets/image/dinner/t2.jpg" alt="Founder" />
-        <div className="team-info">
-          <h3>Prophet Nhyiraba Sekyi Bernard</h3>
-          <p>Founder </p>
+      {/* ===== Our Team Section ===== */}
+      <section className="about-team">
+        <div className="team-content">
+          <h2>Meet Our Team</h2>
+          <div className="team-grid">
+
+            <div className="team-card">
+              <img src="/assets/image/dinner/t2.jpg" alt="Founder" />
+              <div className="team-info">
+                <h3>Prophet Nhyiraba Sekyi Bernard</h3>
+                <p>Founder</p>
+              </div>
+            </div>
+
+            <div className="team-card">
+              <img src="/assets/image/dinner/t.jpg" alt="Programs Director" />
+              <div className="team-info">
+                <h3>Bishop Ernest Anyane Asare</h3>
+                <p>Programs Director</p>
+              </div>
+            </div>
+
+            <div className="team-card">
+              <img src="/assets/image/bishop b.jpg" alt="Management Team" />
+              <div className="team-info">
+                <h3>Management Team</h3>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="team-card">
-        <img src="/assets/image/dinner/t.jpg" alt="Program Lead" />
-        <div className="team-info">
-          <h3>Bishop Ernest Anyane Asare</h3>
-          <p>Programs Director</p>
-        </div>
-      </div>
-
-      <div className="team-card">
-        <img src="/assets/image/bishop b.jpg" alt="Community Lead" />
-        <div className="team-info">
-          <h3>Management Team</h3>
-          {/* <p>Community Outreach
-          </p> */}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-      {/* Call to Action */}
+      {/* ===== Call to Action ===== */}
       <section className="about-cta">
         <div className="cta-content">
           <h2>Join Us in Making a Difference</h2>

@@ -42,7 +42,7 @@ function Gallery() {
 
   return (
     <div className={`gallery-page ${activeMedia !== null ? "dimmed" : ""}`}>
-      {/* Hero Section */}
+      {/* ===== Hero Section ===== */}
       <section className="gallery-hero">
         <div className="gallery-hero-content">
           <h1>Our Gallery</h1>
@@ -50,7 +50,7 @@ function Gallery() {
         </div>
       </section>
 
-      {/* Gallery Grid */}
+      {/* ===== Gallery Grid ===== */}
       <section className="gallery-section">
         <div className="gallery-grid">
           {media.map((src, index) => {
@@ -82,7 +82,7 @@ function Gallery() {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* ===== Call to Action ===== */}
       <section className="gallery-cta">
         <h2>Support Our Work</h2>
         <a href="/donate" className="btn-primary">Donate Now</a>
