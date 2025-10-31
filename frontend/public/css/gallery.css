@@ -1,0 +1,232 @@
+/* Global */
+.gallery-page {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background-color: #fafafa;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Dim effect when active image is open */
+.gallery-page.dimmed::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 9;
+  transition: opacity 0.3s ease;
+}
+
+/* Hero Section */
+.gallery-hero {
+  background: linear-gradient(rgba(114,30,30,0.6), rgba(152,42,77,0.6)),
+              url("/assets/image/banner5.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  border-bottom: 4px solid rgba(255, 215, 0, 0.7);
+}
+
+.gallery-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.gallery-hero p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 80px 20px;
+  max-width: 1300px;
+  margin: auto;
+  background-color: #deddda;
+}
+
+/* ✅ Fixed to 4 columns */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Wrapper for clickable items */
+.gallery-item {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Image Styling — Modern 2025 feel */
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+  filter: brightness(95%) saturate(110%);
+}
+
+/* Hover effect — classy, minimal motion */
+.gallery-item:hover img {
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  filter: brightness(105%) saturate(120%);
+}
+
+/* ✅ Active image (zoomed view) */
+.gallery-item.active {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 85vw;
+  height: 85vh;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 10;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+  animation: zoomIn 0.35s ease forwards;
+}
+
+.gallery-item.active img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* ✅ Zoom animation */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* CTA Banner */
+.gallery-cta {
+  background: linear-gradient(90deg, #721e1e, #982a4d);
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
+  border-radius: 20px;
+  margin-top: 60px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.gallery-cta h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.gallery-cta .btn-primary {
+  background: #ffd700;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-cta .btn-primary:hover {
+  background: #ffcc00;
+  transform: translateY(-3px);
+}
+/* 🎥 Make videos look like images in the grid */
+.gallery-item video {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+  filter: brightness(95%) saturate(110%);
+  pointer-events: none; /* allows click-through to parent div */
+}
+
+/* Hover effect for videos too */
+.gallery-item:hover video {
+  transform: scale(1.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  filter: brightness(105%) saturate(120%);
+}
+
+/* Active video (enlarged mode) */
+.gallery-item.active video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  pointer-events: auto;
+}
+
+/* Optional: autoplay active video */
+.gallery-item.active video {
+  autoplay: autoplay;
+  controls: controls;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gallery-item img {
+    height: 220px;
+  }
+  .gallery-item.active {
+    width: 90vw;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-item img {
+    height: 200px;
+  }
+  .gallery-item.active {
+    width: 90vw;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-item img {
+    height: 180px;
+  }
+  .gallery-item.active {
+    width: 95vw;
+    height: 60vh;
+  }
+}

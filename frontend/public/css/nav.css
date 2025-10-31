@@ -1,0 +1,136 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* full width stretch */
+  width: 100vw;          /* span entire viewport */
+  margin: 0;             /* no outer margin */
+  left: 0;
+  right: 0;
+
+  /* gradient that starts near logo and fades out */
+  background: linear-gradient(
+    to left,
+    rgba(114, 30, 30, 1) 5%,    /* solid near logo */
+    rgba(152, 42, 77, 0.8) 40%, /* fading */
+    rgba(152, 42, 77, 0.2) 100% /* almost gone at far right */
+  );
+
+  padding: 12px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box; /* keep padding inside width */
+}
+
+/* Logo + Text */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+.logo-text {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Nav Links (Desktop) */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+}
+
+/* Donate Button */
+.donate-btn {
+  background: #ffd700;
+  color: #000 !important;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.donate-btn:hover {
+  background: #ffcc00;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: -100%;
+    flex-direction: column;
+    background: rgba(152, 42, 77, 0.95);
+    width: 220px;
+    text-align: center;
+    gap: 20px;
+    padding: 25px 0;
+    border-radius: 10px;
+    transition: right 0.3s ease;
+  }
+
+  .nav-links.open {
+    right: 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

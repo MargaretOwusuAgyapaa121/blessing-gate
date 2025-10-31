@@ -1,0 +1,139 @@
+/* Global */
+.donate-page {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.donate-hero {
+  background: linear-gradient(rgba(114,30,30,0.6), rgba(152,42,77,0.6)),
+              url("/assets/image/bishop.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.donate-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.donate-hero p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Flyer + Info Container */
+.donation-flyer-section {
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.flyer-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1100px;
+  flex-wrap: wrap;
+}
+
+/* Flyer Image */
+.flyer-image {
+  flex: 1.2;
+  min-width: 300px;
+}
+
+.flyer-image img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flyer-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Info Box */
+.flyer-info {
+  flex: 1;
+  min-width: 320px;
+  background: #fff;
+  padding: 40px 35px;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flyer-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.flyer-info h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.3rem);
+  margin-bottom: 20px;
+  color: #721e1e;
+}
+
+.flyer-info h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #982a4d;
+}
+
+.flyer-info p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.flyer-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.flyer-info a {
+  color: #721e1e;
+  text-decoration: underline;
+}
+
+.flyer-info .btn-primary {
+  background: #ffd700;
+  color: #000;
+  padding: 14px 30px;
+  border-radius: 35px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.flyer-info .btn-primary:hover {
+  background: #ffcc00;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .flyer-container {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .flyer-info {
+    text-align: center;
+  }
+  .flyer-info a {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}

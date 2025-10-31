@@ -1,0 +1,138 @@
+/* Global */
+.events-page {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.events-hero {
+  background: linear-gradient(rgba(114,30,30,0.7), rgba(152,42,77,0.7)),
+              url("/assets/image/gallery.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.events-hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.events-hero p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Events Grid */
+.events-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.event-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  /* box-shadow: 0 6px 20px rgba(0,0,0,0.15); */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.03);
+}
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.event-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.15));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  transition: background 0.3s ease;
+}
+
+.event-card:hover .event-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3));
+}
+
+.event-overlay h3 {
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+
+.event-overlay p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.btn-event {
+  background: #ffd700;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-event:hover {
+  background: #ffcc00;
+}
+
+/* CTA Banner */
+.events-cta {
+  background: linear-gradient(90deg, #721e1e, #982a4d);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 15px;
+  margin-top: 40px;
+}
+
+.events-cta h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 20px;
+}
+
+.events-cta .btn-primary {
+  background: #ffd700;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.events-cta .btn-primary:hover {
+  background: #ffcc00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .events-hero h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+  .events-hero p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem);
+  }
+}
